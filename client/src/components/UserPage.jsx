@@ -7,7 +7,7 @@ const UserPage = () => {
   const [socket, setSocket] = useState(null);
 
   useEffect(() => {
-    const socketIo = io("http://localhost:4000");
+    const socketIo = io("https://sports-app-nyuc-backend.onrender.com");
 
     socketIo.on("dataUpdate", (data) => {
       setScores(data);
